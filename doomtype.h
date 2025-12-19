@@ -61,24 +61,9 @@
 // standard and defined to include stdint.h, so include this. 
 
 #include <inttypes.h>
-
-#ifdef __cplusplus
-
-// Use builtin bool type with C++.
+#include <stdbool.h>
 
 typedef bool boolean;
-
-#else
-
-typedef enum 
-{
-    false	= 0,
-    true	= 1,
-	undef	= 0xFFFFFFFF
-} boolean;
-
-#endif
-
 typedef uint8_t byte;
 
 #include <limits.h>
